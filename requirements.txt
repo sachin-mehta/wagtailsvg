@@ -1,4 +1,4 @@
 Django==5.2.4
 wagtail==7.0.1
 flake8>=3.8.4
-wagtail-generic-chooser==0.5.1
+wagtail-generic-chooser==0.7
