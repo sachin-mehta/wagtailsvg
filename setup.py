@@ -22,9 +22,9 @@ setup(
     long_description=long_description,
     keywords="wagtail svg",
     license='GPL-3.0',
+    python_requires='>=3.8',
     install_requires=[
         'wagtail-generic-chooser>=0.7',
-        'wagtail-modeladmin>=1.0',
     ],
     platforms=['linux'],
     packages=find_packages(),
@@ -34,9 +34,10 @@ setup(
         'Intended Audience :: Developers',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Operating System :: OS Independent',
         'Topic :: Software Development'
     ]
