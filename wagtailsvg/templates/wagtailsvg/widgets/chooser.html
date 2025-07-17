@@ -1,5 +1,15 @@
+{# wagtailsvg/widgets/chooser.html #}
 {% extends 'generic_chooser/widgets/chooser.html' %}
 
 {% block chosen_state_view %}
-    <img class="preview-url" style="height: 65px;" src="{{ preview_url }}" alt="{{ title }}">
+    {% if preview_url %}
+        <img
+            class="preview-url"
+            style="height: 65px;"
+            src="{{ preview_url }}"
+            alt="{{ title|default:'SVG Preview' }}"
+        >
+    {% else %}
+        <p><em>No preview available</em></p>
+    {% endif %}
 {% endblock %}
