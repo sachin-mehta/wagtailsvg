@@ -47,13 +47,14 @@ class AdminSvgChooser(AdminChooser):
 
     def render_html(self, name, value, attrs):
         value_data = self.get_value_data(value)
-        original_field_html = self.render_input_html(name, value_data["value"], attrs)
+        field_value = value_data.get("value", None)
+        original_field_html = self.render_input_html(name, field_value, attrs)
 
         context = {
             "widget": self,
             "original_field_html": original_field_html,
             "attrs": attrs,
-            "is_empty": value_data["value"] is None,
+            "is_empty": field_value is None,
             "title": value_data["title"],
             "edit_item_url": value_data["edit_item_url"],
             "create_item_url": self.get_create_item_url(),
